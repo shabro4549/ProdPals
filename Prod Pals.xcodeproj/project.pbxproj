@@ -11,14 +11,23 @@
 		FD0E41712548E2BF00F5EB8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0E416C2548E2BF00F5EB8A /* AppDelegate.swift */; };
 		FD0E41722548E2BF00F5EB8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD0E416D2548E2BF00F5EB8A /* Assets.xcassets */; };
 		FD0E41732548E2BF00F5EB8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0E416E2548E2BF00F5EB8A /* SceneDelegate.swift */; };
-		FD0E41742548E2BF00F5EB8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD0E416F2548E2BF00F5EB8A /* GoogleService-Info.plist */; };
-		FD0E417D2548E34400F5EB8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD0E417B2548E34400F5EB8A /* Main.storyboard */; };
 		FD0E41822548E36600F5EB8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD0E41802548E36600F5EB8A /* LaunchScreen.storyboard */; };
+		FD123AFA25D4940200D5B722 /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD123AF825D4940200D5B722 /* ProgressCollectionViewCell.swift */; };
+		FD123AFB25D4940200D5B722 /* ProgressCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD123AF925D4940200D5B722 /* ProgressCollectionViewCell.xib */; };
+		FD3AF4B025C22EFD002566C6 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3AF4AF25C22EFD002566C6 /* ProgressViewController.swift */; };
+		FD6873352589713100BF6C3B /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6873332589713100BF6C3B /* GoalTableViewCell.swift */; };
+		FD6873362589713100BF6C3B /* GoalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD6873342589713100BF6C3B /* GoalTableViewCell.xib */; };
+		FD738F662653240000A3913C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD738F652653240000A3913C /* Main.storyboard */; };
+		FD7E875C26978452006CD844 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD7E875B26978452006CD844 /* GoogleService-Info.plist */; };
+		FD81A8E625DF23990006652D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81A8E525DF23990006652D /* User.swift */; };
 		FD9DF8D02548E5A600AB62F2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD0E416B2548E2BF00F5EB8A /* Info.plist */; };
 		FD9DF8D725493C6F00AB62F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */; };
 		FD9DF8D825493C6F00AB62F2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */; };
 		FD9DF8D925493C6F00AB62F2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D525493C6E00AB62F2 /* WelcomeViewController.swift */; };
 		FD9DF8DA25493C6F00AB62F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D625493C6F00AB62F2 /* ViewController.swift */; };
+		FDCF01F6260AD93500C56FDA /* SearchedUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF01F5260AD93500C56FDA /* SearchedUserViewController.swift */; };
+		FDDAEC8025C1033900CBAD6E /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDAEC7F25C1033900CBAD6E /* Goal.swift */; };
+		FDF28C9D260D4579006F4281 /* Baloo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDF28C9C260D4579006F4281 /* Baloo-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,15 +38,24 @@
 		FD0E416C2548E2BF00F5EB8A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Prod-Pals/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		FD0E416D2548E2BF00F5EB8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Prod-Pals/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		FD0E416E2548E2BF00F5EB8A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "Prod-Pals/SceneDelegate.swift"; sourceTree = SOURCE_ROOT; };
-		FD0E416F2548E2BF00F5EB8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "Prod-Pals/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		FD0E417C2548E34400F5EB8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Prod-Pals/Base.lproj/Main.storyboard"; sourceTree = SOURCE_ROOT; };
 		FD0E41812548E36600F5EB8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Prod-Pals/Base.lproj/LaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
+		FD123AF825D4940200D5B722 /* ProgressCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCollectionViewCell.swift; sourceTree = "<group>"; };
+		FD123AF925D4940200D5B722 /* ProgressCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressCollectionViewCell.xib; sourceTree = "<group>"; };
+		FD3AF4AF25C22EFD002566C6 /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		FD6873332589713100BF6C3B /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
+		FD6873342589713100BF6C3B /* GoalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalTableViewCell.xib; sourceTree = "<group>"; };
 		FD738329254D091B005AD046 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FD738F652653240000A3913C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FD7E875B26978452006CD844 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FD81A8E525DF23990006652D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FD9DF8D525493C6E00AB62F2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		FD9DF8D625493C6F00AB62F2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FDE1ED8625310C1E00A02496 /* Prod Pals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prod Pals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCF01F5260AD93500C56FDA /* SearchedUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedUserViewController.swift; sourceTree = "<group>"; };
+		FDDAEC7F25C1033900CBAD6E /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		FDE1ED8625310C1E00A02496 /* Something.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Something.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDF28C9C260D4579006F4281 /* Baloo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Baloo-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,12 +90,23 @@
 		FD9DF8D225493C4D00AB62F2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FD9DF8D525493C6E00AB62F2 /* WelcomeViewController.swift */,
 				FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */,
 				FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */,
 				FD9DF8D625493C6F00AB62F2 /* ViewController.swift */,
-				FD9DF8D525493C6E00AB62F2 /* WelcomeViewController.swift */,
+				FD3AF4AF25C22EFD002566C6 /* ProgressViewController.swift */,
+				FDCF01F5260AD93500C56FDA /* SearchedUserViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FDDAEC7E25C1032400CBAD6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDDAEC7F25C1033900CBAD6E /* Goal.swift */,
+				FD81A8E525DF23990006652D /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FDE1ED7D25310C1E00A02496 = {
@@ -94,7 +123,7 @@
 		FDE1ED8725310C1E00A02496 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FDE1ED8625310C1E00A02496 /* Prod Pals.app */,
+				FDE1ED8625310C1E00A02496 /* Something.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,24 +131,38 @@
 		FDE1ED8825310C1E00A02496 /* Prod Pals */ = {
 			isa = PBXGroup;
 			children = (
+				FD738F652653240000A3913C /* Main.storyboard */,
+				FDF28C9B260D44FA006F4281 /* Fonts */,
+				FDDAEC7E25C1032400CBAD6E /* Models */,
 				FD9DF8D225493C4D00AB62F2 /* Controllers */,
-				FD0E417B2548E34400F5EB8A /* Main.storyboard */,
 				FD0E41802548E36600F5EB8A /* LaunchScreen.storyboard */,
 				FD0E416C2548E2BF00F5EB8A /* AppDelegate.swift */,
 				FD0E416D2548E2BF00F5EB8A /* Assets.xcassets */,
-				FD0E416F2548E2BF00F5EB8A /* GoogleService-Info.plist */,
 				FD0E416B2548E2BF00F5EB8A /* Info.plist */,
+				FD7E875B26978452006CD844 /* GoogleService-Info.plist */,
 				FD0E416E2548E2BF00F5EB8A /* SceneDelegate.swift */,
+				FD6873332589713100BF6C3B /* GoalTableViewCell.swift */,
+				FD6873342589713100BF6C3B /* GoalTableViewCell.xib */,
+				FD123AF825D4940200D5B722 /* ProgressCollectionViewCell.swift */,
+				FD123AF925D4940200D5B722 /* ProgressCollectionViewCell.xib */,
 			);
 			path = "Prod Pals";
+			sourceTree = "<group>";
+		};
+		FDF28C9B260D44FA006F4281 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FDF28C9C260D4579006F4281 /* Baloo-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FDE1ED8525310C1E00A02496 /* Prod Pals */ = {
+		FDE1ED8525310C1E00A02496 /* Something */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FDE1ED9A25310C2000A02496 /* Build configuration list for PBXNativeTarget "Prod Pals" */;
+			buildConfigurationList = FDE1ED9A25310C2000A02496 /* Build configuration list for PBXNativeTarget "Something" */;
 			buildPhases = (
 				BBA919FDD58719D0B062A217 /* [CP] Check Pods Manifest.lock */,
 				FDE1ED8225310C1E00A02496 /* Sources */,
@@ -131,9 +174,9 @@
 			);
 			dependencies = (
 			);
-			name = "Prod Pals";
+			name = Something;
 			productName = "Prod Pals";
-			productReference = FDE1ED8625310C1E00A02496 /* Prod Pals.app */;
+			productReference = FDE1ED8625310C1E00A02496 /* Something.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -163,7 +206,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FDE1ED8525310C1E00A02496 /* Prod Pals */,
+				FDE1ED8525310C1E00A02496 /* Something */,
 			);
 		};
 /* End PBXProject section */
@@ -173,11 +216,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDF28C9D260D4579006F4281 /* Baloo-Regular.ttf in Resources */,
 				FD9DF8D02548E5A600AB62F2 /* Info.plist in Resources */,
-				FD0E417D2548E34400F5EB8A /* Main.storyboard in Resources */,
+				FD6873362589713100BF6C3B /* GoalTableViewCell.xib in Resources */,
+				FD123AFB25D4940200D5B722 /* ProgressCollectionViewCell.xib in Resources */,
 				FD0E41822548E36600F5EB8A /* LaunchScreen.storyboard in Resources */,
+				FD738F662653240000A3913C /* Main.storyboard in Resources */,
 				FD0E41722548E2BF00F5EB8A /* Assets.xcassets in Resources */,
-				FD0E41742548E2BF00F5EB8A /* GoogleService-Info.plist in Resources */,
+				FD7E875C26978452006CD844 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,26 +276,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDAEC8025C1033900CBAD6E /* Goal.swift in Sources */,
 				FD9DF8DA25493C6F00AB62F2 /* ViewController.swift in Sources */,
+				FD6873352589713100BF6C3B /* GoalTableViewCell.swift in Sources */,
 				FD9DF8D725493C6F00AB62F2 /* LoginViewController.swift in Sources */,
+				FDCF01F6260AD93500C56FDA /* SearchedUserViewController.swift in Sources */,
 				FD9DF8D925493C6F00AB62F2 /* WelcomeViewController.swift in Sources */,
 				FD0E41712548E2BF00F5EB8A /* AppDelegate.swift in Sources */,
+				FD123AFA25D4940200D5B722 /* ProgressCollectionViewCell.swift in Sources */,
+				FD3AF4B025C22EFD002566C6 /* ProgressViewController.swift in Sources */,
 				FD0E41732548E2BF00F5EB8A /* SceneDelegate.swift in Sources */,
 				FD9DF8D825493C6F00AB62F2 /* RegisterViewController.swift in Sources */,
+				FD81A8E625DF23990006652D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FD0E417B2548E34400F5EB8A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FD0E417C2548E34400F5EB8A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FD0E41802548E36600F5EB8A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -427,7 +471,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FDE1ED9A25310C2000A02496 /* Build configuration list for PBXNativeTarget "Prod Pals" */ = {
+		FDE1ED9A25310C2000A02496 /* Build configuration list for PBXNativeTarget "Something" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FDE1ED9B25310C2000A02496 /* Debug */,

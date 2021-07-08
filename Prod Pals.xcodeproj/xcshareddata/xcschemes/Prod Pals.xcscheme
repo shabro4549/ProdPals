@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FDE1ED8525310C1E00A02496"
-               BuildableName = "Prod Pals.app"
-               BlueprintName = "Prod Pals"
+               BuildableName = "Something.app"
+               BlueprintName = "Something"
                ReferencedContainer = "container:Prod Pals.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FDE1ED8525310C1E00A02496"
-            BuildableName = "Prod Pals.app"
-            BlueprintName = "Prod Pals"
+            BuildableName = "Something.app"
+            BlueprintName = "Something"
             ReferencedContainer = "container:Prod Pals.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FDE1ED8525310C1E00A02496"
-            BuildableName = "Prod Pals.app"
-            BlueprintName = "Prod Pals"
+            BuildableName = "Something.app"
+            BlueprintName = "Something"
             ReferencedContainer = "container:Prod Pals.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     @IBAction func loginPressed(_ sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextField.text {
@@ -24,6 +25,14 @@ class LoginViewController: UIViewController {
               }
         }
         
+    }
+    
+    override func viewDidLoad() {
+        emailTextField.layer.cornerRadius = 30
+        emailTextField.clipsToBounds = true
+        passwordTextField.layer.cornerRadius = 30
+        passwordTextField.clipsToBounds = true
+        loginButton.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_4))
     }
     
 }

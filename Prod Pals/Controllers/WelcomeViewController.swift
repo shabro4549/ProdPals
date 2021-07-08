@@ -9,6 +9,9 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
+    @IBOutlet weak var registerBtn: UIButton!
+    @IBOutlet weak var loginBtn: UIButton!
+    
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
     }
@@ -19,6 +22,10 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerBtn.layer.cornerRadius = 30
+        registerBtn.clipsToBounds = true
+        loginBtn.layer.cornerRadius = 30
+        loginBtn.clipsToBounds = true
         // Do any additional setup after loading the view.
     }
 }

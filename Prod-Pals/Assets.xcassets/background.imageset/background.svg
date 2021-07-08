@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1125 2436" style="enable-background:new 0 0 1125 2436;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#222F3E;}
+	.st1{fill:#F2F2F2;}
+	.st2{font-family:'Baloo-Regular';}
+	.st3{font-size:150px;}
+	.st4{fill:#5F27CD;}
+	.st5{fill:#FF6B6B;}
+	.st6{fill:#FF9FF3;}
+	.st7{fill:#FECA57;}
+	.st8{fill:#1DD1A1;}
+	.st9{fill:#48DBFB;}
+	.st10{fill:#C8D6E5;}
+	.st11{font-size:50px;}
+	.st12{font-size:70px;}
+</style>
+<rect x="-2" class="st0" width="1125" height="2436"/>
+<text transform="matrix(1 0 0 1 185.8887 1211.1953)" class="st1 st2 st3">Something</text>
+<g>
+	<path class="st4" d="M484,700h-60c-33.1,0-61-26.9-61-60v-15c0-24.9-20.1-45-45-45h-15v60c0,66.2,54.8,120,121,120v61h120v-61
+		C544,726.9,517.1,700,484,700z"/>
+	<path class="st5" d="M754,625v15c0,33.1-26.9,60-60,60h-60c-33.1,0-60,26.9-60,60v61h120v-61c66.2,0,121-53.8,121-120v-60h-15
+		C775.1,580,754,600.1,754,625z"/>
+	<circle class="st6" cx="484" cy="655" r="45"/>
+	<circle class="st7" cx="634" cy="655" r="45"/>
+	<path class="st8" d="M529,370c8.3,0,15-6.7,15-15v-46c-84.1,7.6-150,79.9-150,166c0,15.6,2.3,30.7,6.4,45H439c8.3,0,15-6.7,15-15
+		v-15h75c8.3,0,15-6.7,15-15s-6.7-15-15-15c-24.8,0-45-20.2-45-45S504.2,370,529,370z"/>
+	<path class="st8" d="M679,520h38.6c4.1-14.3,6.4-29.4,6.4-45c0-5.1-0.3-10.1-0.8-15H649c-8.3,0-15,6.7-15,15s6.7,15,15,15h15v15
+		C664,513.3,670.7,520,679,520z"/>
+	<path class="st9" d="M634,580c15.1,0,29.2,4.6,41,12.3c12.4-12.3,22.8-26.6,30.8-42.3H679c-20.3,0-37.5-13.5-43.1-31.9
+		c-18.5-5.6-31.9-22.8-31.9-43.1c0-24.8,20.2-45,45-45h68.6c-18.3-64.6-74.8-114.8-143.6-121v46c0,24.8-20.2,45-45,45
+		c-8.3,0-15,6.7-15,15s6.7,15,15,15c24.8,0,45,20.2,45,45s-20.2,45-45,45h-47.6c-6.2,17.5-22.9,30-42.4,30h-26.8
+		c8,15.7,18.4,30,30.8,42.3c11.8-7.7,25.8-12.3,41-12.3c36.2,0,66.5,25.8,73.5,59.9c0.5,0,1,0.1,1.5,0.1s1-0.1,1.5-0.1
+		C567.5,605.8,597.8,580,634,580z"/>
+</g>
+<text transform="matrix(1 0 0 1 173.0029 1056.2354)" class="st10 st2 st11">This could be...</text>
+<text transform="matrix(1 0 0 1 472.4727 1495.6465)" class="st0 st2 st12">Login</text>
+<text transform="matrix(1 0 0 1 428.1084 1740.1757)" class="st0 st2 st12">Register</text>
+</svg>
