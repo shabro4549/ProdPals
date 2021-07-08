@@ -294,7 +294,11 @@ class ViewController: UIViewController {
     do {
       try Auth.auth().signOut()
         usersGoal = []
-        navigationController?.popToRootViewController(animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
+
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(loginNavController)
+//        navigationController?.popToRootViewController(animated: true)
     } catch let signOutError as NSError {
       print ("Error signing out: %@", signOutError)
     }
