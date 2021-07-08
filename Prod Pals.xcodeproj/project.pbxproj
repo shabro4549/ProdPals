@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1E20355D778A93BB320B2514 /* Pods_Prod_Pals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C98EFA99EA8088F318ABCD0 /* Pods_Prod_Pals.framework */; };
 		FD0E41712548E2BF00F5EB8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0E416C2548E2BF00F5EB8A /* AppDelegate.swift */; };
-		FD0E41722548E2BF00F5EB8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD0E416D2548E2BF00F5EB8A /* Assets.xcassets */; };
 		FD0E41732548E2BF00F5EB8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0E416E2548E2BF00F5EB8A /* SceneDelegate.swift */; };
 		FD0E41822548E36600F5EB8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD0E41802548E36600F5EB8A /* LaunchScreen.storyboard */; };
 		FD123AFA25D4940200D5B722 /* ProgressCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD123AF825D4940200D5B722 /* ProgressCollectionViewCell.swift */; };
@@ -19,8 +18,8 @@
 		FD6873362589713100BF6C3B /* GoalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD6873342589713100BF6C3B /* GoalTableViewCell.xib */; };
 		FD738F662653240000A3913C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD738F652653240000A3913C /* Main.storyboard */; };
 		FD7E875C26978452006CD844 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD7E875B26978452006CD844 /* GoogleService-Info.plist */; };
+		FD7E87612697B8D1006CD844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD0E416D2548E2BF00F5EB8A /* Assets.xcassets */; };
 		FD81A8E625DF23990006652D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81A8E525DF23990006652D /* User.swift */; };
-		FD9DF8D02548E5A600AB62F2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD0E416B2548E2BF00F5EB8A /* Info.plist */; };
 		FD9DF8D725493C6F00AB62F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */; };
 		FD9DF8D825493C6F00AB62F2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */; };
 		FD9DF8D925493C6F00AB62F2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D525493C6E00AB62F2 /* WelcomeViewController.swift */; };
@@ -34,7 +33,6 @@
 		0C98EFA99EA8088F318ABCD0 /* Pods_Prod_Pals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prod_Pals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		654E3B9197A6CD308B99F2FF /* Pods-Prod Pals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prod Pals.release.xcconfig"; path = "Target Support Files/Pods-Prod Pals/Pods-Prod Pals.release.xcconfig"; sourceTree = "<group>"; };
 		C291E0F06CD4BF151BAFFC17 /* Pods-Prod Pals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prod Pals.debug.xcconfig"; path = "Target Support Files/Pods-Prod Pals/Pods-Prod Pals.debug.xcconfig"; sourceTree = "<group>"; };
-		FD0E416B2548E2BF00F5EB8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "Prod-Pals/Info.plist"; sourceTree = SOURCE_ROOT; };
 		FD0E416C2548E2BF00F5EB8A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Prod-Pals/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		FD0E416D2548E2BF00F5EB8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Prod-Pals/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		FD0E416E2548E2BF00F5EB8A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "Prod-Pals/SceneDelegate.swift"; sourceTree = SOURCE_ROOT; };
@@ -47,6 +45,7 @@
 		FD738329254D091B005AD046 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FD738F652653240000A3913C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FD7E875B26978452006CD844 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FD7E875D2697B55F006CD844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD81A8E525DF23990006652D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +111,7 @@
 		FDE1ED7D25310C1E00A02496 = {
 			isa = PBXGroup;
 			children = (
+				FD7E875D2697B55F006CD844 /* Info.plist */,
 				FD738329254D091B005AD046 /* README.md */,
 				FDE1ED8825310C1E00A02496 /* Prod Pals */,
 				FDE1ED8725310C1E00A02496 /* Products */,
@@ -138,7 +138,6 @@
 				FD0E41802548E36600F5EB8A /* LaunchScreen.storyboard */,
 				FD0E416C2548E2BF00F5EB8A /* AppDelegate.swift */,
 				FD0E416D2548E2BF00F5EB8A /* Assets.xcassets */,
-				FD0E416B2548E2BF00F5EB8A /* Info.plist */,
 				FD7E875B26978452006CD844 /* GoogleService-Info.plist */,
 				FD0E416E2548E2BF00F5EB8A /* SceneDelegate.swift */,
 				FD6873332589713100BF6C3B /* GoalTableViewCell.swift */,
@@ -186,7 +185,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					FDE1ED8525310C1E00A02496 = {
 						CreatedOnToolsVersion = 12.0;
@@ -217,12 +216,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF28C9D260D4579006F4281 /* Baloo-Regular.ttf in Resources */,
-				FD9DF8D02548E5A600AB62F2 /* Info.plist in Resources */,
 				FD6873362589713100BF6C3B /* GoalTableViewCell.xib in Resources */,
 				FD123AFB25D4940200D5B722 /* ProgressCollectionViewCell.xib in Resources */,
 				FD0E41822548E36600F5EB8A /* LaunchScreen.storyboard in Resources */,
+				FD7E87612697B8D1006CD844 /* Assets.xcassets in Resources */,
 				FD738F662653240000A3913C /* Main.storyboard in Resources */,
-				FD0E41722548E2BF00F5EB8A /* Assets.xcassets in Resources */,
 				FD7E875C26978452006CD844 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
