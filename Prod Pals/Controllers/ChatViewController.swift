@@ -16,6 +16,7 @@ class ChatViewController: UIViewController {
     let db = Firestore.firestore()
     var user = Auth.auth().currentUser
     var sharedGoals: [Goal] = []
+    var selectedChatTitle = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,7 +91,7 @@ extension ChatViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = chatTableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
-
+        cell.delegate = self
         cell.configure(with: sharedGoals[indexPath.row].goal)
         print(sharedGoals[indexPath.row].goal)
         cell.chatButton.backgroundColor = goalColours.randomElement()
@@ -98,7 +99,20 @@ extension ChatViewController : UITableViewDelegate, UITableViewDataSource {
         cell.chatButton.layer.masksToBounds = true
         return cell
     }
-    
-    
+
 }
 
+//MARK: - ChatTableViewCell Delegate
+
+extension ChatViewController : ChatTableViewCellDelegate {
+    func didTapButton(with title: String) {
+        selectedChatTitle = title
+        print(selectedChatTitle)
+        performSegue(withIdentifier: "goToChat", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! MessageViewController
+        destinationVC.selectedChat = selectedChatTitle
+    }
+}

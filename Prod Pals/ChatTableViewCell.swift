@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol ChatTableViewCellDelegate: AnyObject {
+    func didTapButton(with title: String)
+}
+
 class ChatTableViewCell: UITableViewCell{
+    
+    weak var delegate: ChatTableViewCellDelegate?
     
     static let identifier = "ChatTableViewCell"
     
@@ -16,6 +22,11 @@ class ChatTableViewCell: UITableViewCell{
     }
     
     @IBOutlet weak var chatButton: UIButton!
+    private var title: String = ""
+    
+    @IBAction func didTapButton(_ sender: Any) {
+        delegate?.didTapButton(with: title)
+    }
     
     func configure(with title: String) {
         print(title)

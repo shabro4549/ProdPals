@@ -419,11 +419,28 @@
                     <connections>
                         <outlet property="chatTableView" destination="Ko1-3t-q6g" id="Gho-ak-cRO"/>
                         <outlet property="ifEmptyLabel" destination="FkF-Yg-fhm" id="kHf-2n-1Rd"/>
+                        <segue destination="ap1-Ah-zG2" kind="show" identifier="goToChat" id="wp7-vd-kww"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rcg-sT-ZaN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3376.811594202899" y="133.92857142857142"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="eHV-DI-Vuf">
+            <objects>
+                <viewController id="ap1-Ah-zG2" customClass="MessageViewController" customModule="Something" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="59Y-sh-f59">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NJF-01-bI9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RbI-TN-Hyl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IqI-g5-Gza" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4183" y="154"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aNC-fd-SWL">
@@ -480,6 +497,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xxL-UL-qTg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.1333333333" green="0.1843137255" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

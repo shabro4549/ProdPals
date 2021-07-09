@@ -22,6 +22,7 @@
 		FD7E87632697C314006CD844 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E87622697C314006CD844 /* ChatViewController.swift */; };
 		FD7E87662697D13A006CD844 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E87642697D13A006CD844 /* ChatTableViewCell.swift */; };
 		FD7E87672697D13A006CD844 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7E87652697D13A006CD844 /* ChatTableViewCell.xib */; };
+		FD7E87692698097B006CD844 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E87682698097B006CD844 /* MessageViewController.swift */; };
 		FD81A8E625DF23990006652D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81A8E525DF23990006652D /* User.swift */; };
 		FD9DF8D725493C6F00AB62F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */; };
 		FD9DF8D825493C6F00AB62F2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */; };
@@ -52,6 +53,7 @@
 		FD7E87622697C314006CD844 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FD7E87642697D13A006CD844 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		FD7E87652697D13A006CD844 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
+		FD7E87682698097B006CD844 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		FD81A8E525DF23990006652D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				FD3AF4AF25C22EFD002566C6 /* ProgressViewController.swift */,
 				FDCF01F5260AD93500C56FDA /* SearchedUserViewController.swift */,
 				FD7E87622697C314006CD844 /* ChatViewController.swift */,
+				FD7E87682698097B006CD844 /* MessageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				FD9DF8DA25493C6F00AB62F2 /* ViewController.swift in Sources */,
 				FD6873352589713100BF6C3B /* GoalTableViewCell.swift in Sources */,
 				FD9DF8D725493C6F00AB62F2 /* LoginViewController.swift in Sources */,
+				FD7E87692698097B006CD844 /* MessageViewController.swift in Sources */,
 				FDCF01F6260AD93500C56FDA /* SearchedUserViewController.swift in Sources */,
 				FD9DF8D925493C6F00AB62F2 /* WelcomeViewController.swift in Sources */,
 				FD0E41712548E2BF00F5EB8A /* AppDelegate.swift in Sources */,
