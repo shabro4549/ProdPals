@@ -22,6 +22,7 @@ class ProgressViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = selectedGoal
         let nib = UINib(nibName: ProgressCollectionViewCell.identifier, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: ProgressCollectionViewCell.identifier)
         collectionView.dataSource = self
