@@ -20,10 +20,28 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet weak var goalLabel: UILabel!
     @IBOutlet weak var progressImage: UIImageView!
     
-//    func configure(with goal: String, with user: String) {
-//        nameLabel.text = user
-//        goalLabel.text = goal
-//    }
+    func configure(with date: String, with goal: String, with image: String, with user: String) {
+        let url = URL(string: image)!
+        
+        nameLabel.text = user
+        goalLabel.text = goal
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+
+            if let data = data {
+                
+                DispatchQueue.main.async() { [weak self] in
+                            self?.progressImage.image = UIImage(data: data)
+                        }
+
+            } else {
+                print(error!)
+            }
+        }.resume()
+        
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
