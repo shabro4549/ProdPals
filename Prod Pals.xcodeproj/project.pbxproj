@@ -24,6 +24,8 @@
 		FD7E87672697D13A006CD844 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7E87652697D13A006CD844 /* ChatTableViewCell.xib */; };
 		FD7E87692698097B006CD844 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E87682698097B006CD844 /* MessageViewController.swift */; };
 		FD7E876C26980D59006CD844 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E876B26980D59006CD844 /* FeedViewController.swift */; };
+		FD7E876F269812CF006CD844 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E876D269812CF006CD844 /* FeedTableViewCell.swift */; };
+		FD7E8770269812CF006CD844 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7E876E269812CF006CD844 /* FeedTableViewCell.xib */; };
 		FD81A8E625DF23990006652D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81A8E525DF23990006652D /* User.swift */; };
 		FD9DF8D725493C6F00AB62F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */; };
 		FD9DF8D825493C6F00AB62F2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */; };
@@ -56,6 +58,8 @@
 		FD7E87652697D13A006CD844 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		FD7E87682698097B006CD844 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		FD7E876B26980D59006CD844 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		FD7E876D269812CF006CD844 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		FD7E876E269812CF006CD844 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		FD81A8E525DF23990006652D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 				FD123AF925D4940200D5B722 /* ProgressCollectionViewCell.xib */,
 				FD7E87642697D13A006CD844 /* ChatTableViewCell.swift */,
 				FD7E87652697D13A006CD844 /* ChatTableViewCell.xib */,
+				FD7E876D269812CF006CD844 /* FeedTableViewCell.swift */,
+				FD7E876E269812CF006CD844 /* FeedTableViewCell.xib */,
 			);
 			path = "Prod Pals";
 			sourceTree = "<group>";
@@ -230,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7E8770269812CF006CD844 /* FeedTableViewCell.xib in Resources */,
 				FDF28C9D260D4579006F4281 /* Baloo-Regular.ttf in Resources */,
 				FD7E87672697D13A006CD844 /* ChatTableViewCell.xib in Resources */,
 				FD6873362589713100BF6C3B /* GoalTableViewCell.xib in Resources */,
@@ -293,6 +300,7 @@
 				FDDAEC8025C1033900CBAD6E /* Goal.swift in Sources */,
 				FD9DF8DA25493C6F00AB62F2 /* ViewController.swift in Sources */,
 				FD6873352589713100BF6C3B /* GoalTableViewCell.swift in Sources */,
+				FD7E876F269812CF006CD844 /* FeedTableViewCell.swift in Sources */,
 				FD9DF8D725493C6F00AB62F2 /* LoginViewController.swift in Sources */,
 				FD7E87692698097B006CD844 /* MessageViewController.swift in Sources */,
 				FDCF01F6260AD93500C56FDA /* SearchedUserViewController.swift in Sources */,
