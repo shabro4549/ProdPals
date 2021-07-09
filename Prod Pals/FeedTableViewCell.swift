@@ -29,7 +29,6 @@ class FeedTableViewCell: UITableViewCell {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
 
             if let data = data {
-                
                 DispatchQueue.main.async() { [weak self] in
                             self?.progressImage.image = UIImage(data: data)
                         }

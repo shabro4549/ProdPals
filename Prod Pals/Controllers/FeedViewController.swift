@@ -100,12 +100,9 @@ extension FeedViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = feedTableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell", for: indexPath) as! FeedTableViewCell
-
-        for item in progressItems {
-            cell.configure(with: item.date, with: item.goal, with: item.image, with: item.user)
-        }
         
-        print("TableView Delegate ... \(progressItems)")
+        cell.configure(with: progressItems[indexPath.row].date, with: progressItems[indexPath.row].goal, with: progressItems[indexPath.row].image, with: progressItems[indexPath.row].user)
+
         return cell
     }
     
