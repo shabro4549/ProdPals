@@ -442,6 +442,22 @@
             </objects>
             <point key="canvasLocation" x="4183" y="154"/>
         </scene>
+        <!--Supporting-->
+        <scene sceneID="xya-vM-Xh6">
+            <objects>
+                <viewController id="bzw-vu-4bF" customClass="FeedViewController" customModule="Something" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KEG-3W-03y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="19d-xC-P88"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Supporting" id="n2B-1X-cxb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3f-wL-06j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5387" y="147"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aNC-fd-SWL">
             <objects>
@@ -457,6 +473,7 @@
                     <connections>
                         <segue destination="bkz-zN-e2L" kind="relationship" relationship="viewControllers" id="afS-CV-2vC"/>
                         <segue destination="ZEG-Tw-vww" kind="relationship" relationship="viewControllers" id="8hU-dD-R11"/>
+                        <segue destination="WXO-l5-gQZ" kind="relationship" relationship="viewControllers" id="DmB-y8-Xec"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Npe-vs-aeM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -513,6 +530,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U4y-KZ-RDp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3378" y="-589"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nZo-pO-Zzo">
+            <objects>
+                <navigationController id="WXO-l5-gQZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="globe" catalog="system" id="Qua-iQ-xX1"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sVF-H8-To7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1333333333" green="0.1843137255" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bzw-vu-4bF" kind="relationship" relationship="rootViewController" id="DaW-Z2-Ij3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8KO-Kd-C21" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5383" y="-589"/>
         </scene>
         <!--Searched User View Controller-->
         <scene sceneID="CC6-s6-UeN">
@@ -674,6 +715,7 @@
         <segue reference="h8K-Bm-FvW"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="globe" catalog="system" width="128" height="121"/>
         <image name="handshake" width="512" height="512"/>
         <image name="loginBackground" width="1125" height="2436"/>
         <image name="logo" width="204" height="203.80000305175781"/>
