@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     let db = Firestore.firestore()
     var goalColours = [#colorLiteral(red: 1, green: 0.6235294118, blue: 0.9529411765, alpha: 1), #colorLiteral(red: 0.9960784314, green: 0.7921568627, blue: 0.3411764706, alpha: 1), #colorLiteral(red: 1, green: 0.4196078431, blue: 0.4196078431, alpha: 1), #colorLiteral(red: 0.2823529412, green: 0.8588235294, blue: 0.9843137255, alpha: 1), #colorLiteral(red: 0.1137254902, green: 0.8196078431, blue: 0.631372549, alpha: 1), #colorLiteral(red: 0, green: 0.8235294118, blue: 0.8274509804, alpha: 1), #colorLiteral(red: 0.3294117647, green: 0.6274509804, blue: 1, alpha: 1), #colorLiteral(red: 0.3725490196, green: 0.1529411765, blue: 0.8039215686, alpha: 1)]
     var bigGoals: [Goal] = []
-    var usersGoal: [String] = []
+    var usersGoal: [Goal] = []
     var user = Auth.auth().currentUser
     var image: UIImage? = nil
     var selectedGoalTitle = ""
@@ -203,8 +203,8 @@ class ViewController: UIViewController {
 //                        print("This is the doc in snapshotListener for bigGoals ... \(doc.data())")
                         let data = doc.data()
                         
-                        if let userData = data["user"] as? String, let goalData = data["bigGoal"] as? String {
-                            let newGoal = Goal(user: userData, goal: goalData)
+                        if let userData = data["user"] as? String, let goalData = data["bigGoal"] as? String, let goalType = data["type"] as? String {
+                            let newGoal = Goal(user: userData, goal: goalData, type: goalType)
                             
                             self.bigGoals.append(newGoal)
 
@@ -328,13 +328,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         for goal in bigGoals {
             if goal.user == Auth.auth().currentUser?.email {
-                usersGoal.append(goal.goal)
+                usersGoal.append(goal)
             }
         }
         
-        cell.configure(with: usersGoal[indexPath.row])
+        cell.configure(with: usersGoal[indexPath.row].goal, with: usersGoal[indexPath.row].type)
         print("Row at Index Path ... \(indexPath.row)")
         print(usersGoal)
+        print(bigGoals)
+        print(bigGoals[indexPath.row].goal)
         usersGoal = []
         cell.bigGoalButton.backgroundColor = goalColours.randomElement()
         cell.bigGoalButton.layer.cornerRadius = 20
@@ -414,7 +416,25 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
 
 class GoalAlert: UIViewController {
     
+    let db = Firestore.firestore()
+    
     let sampleTextField =  UITextField(frame: CGRect(x: 45, y: 100, width: 240, height: 42))
+    let items: [UIImage]
+    let customSC: UISegmentedControl
+    
+    init() {
+        self.items = [
+                    UIImage(systemName: "globe")!,
+                    UIImage(systemName: "person.2.fill")!,
+                    UIImage(systemName: "lock.fill")!
+                ]
+        self.customSC = UISegmentedControl(items: items)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     struct Constants {
         static let backgroundAlphaTo: CGFloat = 0.6
@@ -469,12 +489,12 @@ class GoalAlert: UIViewController {
 //            sampleTextField.delegate = self
             alertView.addSubview(sampleTextField)
         
-        let items: [UIImage] = [
-            UIImage(systemName: "globe")!,
-            UIImage(systemName: "person.2.fill")!,
-            UIImage(systemName: "lock.fill")!
-        ]
-        let customSC = UISegmentedControl(items: items)
+//        let items: [UIImage] = [
+//            UIImage(systemName: "globe")!,
+//            UIImage(systemName: "person.2.fill")!,
+//            UIImage(systemName: "lock.fill")!
+//        ]
+//        let customSC = UISegmentedControl(items: items)
         customSC.selectedSegmentIndex = 0
         customSC.frame = CGRect(x: 45, y: 180,
                                 width: 240, height: 42)
@@ -516,20 +536,31 @@ class GoalAlert: UIViewController {
     }
     
     @objc func dismissAlert() {
+        var selectedSegment = ""
         print(sampleTextField.text!)
+        if customSC.selectedSegmentIndex == 0 {
+           selectedSegment = "public"
+        } else if  customSC.selectedSegmentIndex == 1 {
+            selectedSegment = "shared"
+        } else {
+            selectedSegment = "private"
+        }
+        print(customSC.selectedSegmentIndex)
+        print()
         
-//                if let addedGoal = sampleTextField.text, let user = Auth.auth().currentUser?.email {
-//                    self.db.collection("bigGoals").addDocument(data: [
-//                            "bigGoal" : addedGoal,
-//                            "user" : user
-//                    ]) { (error) in
-//                            if let e = error {
-//                                print("There was an issue saving data to firestore, \(e)")
-//                            } else {
-//                                print("Successfully saved data.")
-//                            }
-//                        }
-//                    }
+                if let addedGoal = sampleTextField.text, let user = Auth.auth().currentUser?.email {
+                    self.db.collection("bigGoals").addDocument(data: [
+                            "bigGoal" : addedGoal,
+                            "user" : user,
+                            "type" : selectedSegment
+                    ]) { (error) in
+                            if let e = error {
+                                print("There was an issue saving data to firestore, \(e)")
+                            } else {
+                                print("Successfully saved data.")
+                            }
+                        }
+                    }
         
         guard let targetView = myTargetView else {
             return

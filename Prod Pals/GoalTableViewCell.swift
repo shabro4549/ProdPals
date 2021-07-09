@@ -21,6 +21,7 @@ class GoalTableViewCell: UITableViewCell {
         return UINib(nibName: "GoalTableViewCell", bundle: nil)
     }
     
+    @IBOutlet weak var goalType: UIImageView!
     @IBOutlet weak var bigGoalButton: UIButton!
     private var title: String = ""
 
@@ -28,10 +29,19 @@ class GoalTableViewCell: UITableViewCell {
         delegate?.didTapButton(with: title)
     }
     
-    func configure(with title: String) {
+    func configure(with title: String, with type: String) {
         self.title = title
         bigGoalButton.setTitle(title, for: .normal)
-    }
+        if type == "public" {
+            goalType.image = UIImage(systemName: "globe")!
+        } else if type == "shared" {
+            goalType.image = UIImage(systemName: "person.2.fill")!
+        } else if type == "private" {
+            goalType.image = UIImage(systemName: "lock.fill")!
+        } else {
+            print("Error, goal type not recognized")
+        }
+     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,7 +57,7 @@ class GoalTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-
+        
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20))
         
     }

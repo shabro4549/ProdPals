@@ -11,5 +11,6 @@ import UIKit
 struct Goal {
     let user: String
     let goal: String
+    let type: String
 //    let images: [UIImage]
 }
