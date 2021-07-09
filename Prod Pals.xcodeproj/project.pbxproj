@@ -20,6 +20,8 @@
 		FD7E875C26978452006CD844 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD7E875B26978452006CD844 /* GoogleService-Info.plist */; };
 		FD7E87612697B8D1006CD844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD0E416D2548E2BF00F5EB8A /* Assets.xcassets */; };
 		FD7E87632697C314006CD844 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E87622697C314006CD844 /* ChatViewController.swift */; };
+		FD7E87662697D13A006CD844 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E87642697D13A006CD844 /* ChatTableViewCell.swift */; };
+		FD7E87672697D13A006CD844 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7E87652697D13A006CD844 /* ChatTableViewCell.xib */; };
 		FD81A8E625DF23990006652D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81A8E525DF23990006652D /* User.swift */; };
 		FD9DF8D725493C6F00AB62F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */; };
 		FD9DF8D825493C6F00AB62F2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */; };
@@ -48,6 +50,8 @@
 		FD7E875B26978452006CD844 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FD7E875D2697B55F006CD844 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD7E87622697C314006CD844 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		FD7E87642697D13A006CD844 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		FD7E87652697D13A006CD844 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		FD81A8E525DF23990006652D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 				FD6873342589713100BF6C3B /* GoalTableViewCell.xib */,
 				FD123AF825D4940200D5B722 /* ProgressCollectionViewCell.swift */,
 				FD123AF925D4940200D5B722 /* ProgressCollectionViewCell.xib */,
+				FD7E87642697D13A006CD844 /* ChatTableViewCell.swift */,
+				FD7E87652697D13A006CD844 /* ChatTableViewCell.xib */,
 			);
 			path = "Prod Pals";
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF28C9D260D4579006F4281 /* Baloo-Regular.ttf in Resources */,
+				FD7E87672697D13A006CD844 /* ChatTableViewCell.xib in Resources */,
 				FD6873362589713100BF6C3B /* GoalTableViewCell.xib in Resources */,
 				FD123AFB25D4940200D5B722 /* ProgressCollectionViewCell.xib in Resources */,
 				FD0E41822548E36600F5EB8A /* LaunchScreen.storyboard in Resources */,
@@ -288,6 +295,7 @@
 				FD3AF4B025C22EFD002566C6 /* ProgressViewController.swift in Sources */,
 				FD7E87632697C314006CD844 /* ChatViewController.swift in Sources */,
 				FD0E41732548E2BF00F5EB8A /* SceneDelegate.swift in Sources */,
+				FD7E87662697D13A006CD844 /* ChatTableViewCell.swift in Sources */,
 				FD9DF8D825493C6F00AB62F2 /* RegisterViewController.swift in Sources */,
 				FD81A8E625DF23990006652D /* User.swift in Sources */,
 			);
