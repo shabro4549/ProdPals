@@ -359,6 +359,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController: GoalTableViewCellDelegate {
     func didTapButton(with title: String) {
         selectedGoalTitle = title
+        print("didTapButton title ...\(title)")
+        print("didTapButton selected ...\(selectedGoalTitle)")
         performSegue(withIdentifier: "goToGoalProgress", sender: self)
     }
     
@@ -366,7 +368,7 @@ extension ViewController: GoalTableViewCellDelegate {
         if segue.identifier == "goToGoalProgress" {
             let destinationVC = segue.destination as! ProgressViewController
             destinationVC.selectedGoal = selectedGoalTitle
-            print(selectedGoalTitle)
+            print("ViewController ... \(selectedGoalTitle)")
         }
         
         if segue.identifier == "goToUser" {

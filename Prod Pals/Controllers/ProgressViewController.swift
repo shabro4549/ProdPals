@@ -34,8 +34,6 @@ class ProgressViewController: UIViewController {
     @IBAction func addProgressClicked(_ sender: UIButton) {
         print("Add Progress Clicked")
         presentPicker()
-//        print(progressImages)
-
     }
     
 
@@ -169,7 +167,6 @@ extension ProgressViewController: UIImagePickerControllerDelegate, UINavigationC
                             let storageRef = Storage.storage().reference().child("goal_images").child("\(imageName).png")
         
                             if let uploadData = imageSelected.pngData() {
-//                                print(uploadData)
                                 storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
                                     if error != nil {
                                         print(error!)
@@ -183,7 +180,6 @@ extension ProgressViewController: UIImagePickerControllerDelegate, UINavigationC
                                         }
         
                                         guard let imageUrl = url else { return }
-                                        
                                         self.createNewPhotosCollection(selectedGoal: currentSelectedGoal, imageUrlString: imageUrl.absoluteString, dateToday: todaysDate)
 
                                     }
@@ -200,7 +196,6 @@ extension ProgressViewController: UIImagePickerControllerDelegate, UINavigationC
     func createNewPhotosCollection(selectedGoal: String, imageUrlString: String, dateToday: String) {
         
         if let userEmail = user?.email {
-            
             db.collection("goalProgress").addDocument(data: [
                 "goal" : selectedGoal,
                 "user": userEmail,

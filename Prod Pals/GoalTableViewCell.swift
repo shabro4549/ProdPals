@@ -30,7 +30,7 @@ class GoalTableViewCell: UITableViewCell {
     }
     
     func configure(with title: String, with type: String) {
-//        self.title = title
+        self.title = title
         bigGoalButton.setTitle(title, for: .normal)
         if type == "public" {
             goalType.image = UIImage(systemName: "globe")!

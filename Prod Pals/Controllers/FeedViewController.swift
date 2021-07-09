@@ -61,19 +61,22 @@ class FeedViewController: UIViewController {
                 print("There was an issue retrieving data from Firestore when loading feed for FeedViewController. \(e)")
             } else {
                 if let snapshotDocuments = querySnapshot?.documents {
-//                    print("Snapshot docs ... \(snapshotDocuments)")
+
                     for doc in snapshotDocuments {
-//                        print("In for loop")
+                        
                         let data = doc.data()
-//                        print("loadFeed data ... \(data)")
+                        
                         if let dateData = data["date"] as? String, let goalData = data["goal"] as? String, let imageData = data["images"] as? String, let userData = data["user"] as? String {
-//                            print(dateData)
-//                            print(goalData)
-//                            print(imageData)
-//                            print(userData)
-                            self.progressItems.append(Progress(date: dateData, goal: goalData, image: imageData, user: userData))
-//                            print("For loop progressItems ... \(self.progressItems)")
+                            
+                            print("userSupporters in loadFeed ... \(self.usersSupporters)")
+                            
+                            for user in self.usersSupporters {
+                                if user == userData {
+                                    self.progressItems.append(Progress(date: dateData, goal: goalData, image: imageData, user: userData))
+                                }
+                            }
         
+//                            self.progressItems.append(Progress(date: dateData, goal: goalData, image: imageData, user: userData))
                             
                             DispatchQueue.main.async {
                                 self.feedTableView.reloadData()
