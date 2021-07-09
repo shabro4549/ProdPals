@@ -60,13 +60,18 @@ class ChatViewController: UIViewController {
                             
                         }
                         print("The users shared goals are ... \(self.sharedGoals)")
-                        
+//                        print("you have \(sharedGoals.count) shared goals")
+                        if self.sharedGoals.count == 0 {
+                            self.ifEmptyLabel.text = "You don't have any chats yet"
+                        } else {
+                            self.ifEmptyLabel.text = "Click on a shared goal to share your progress"
+                        }
+
                     }
                     
                 }
             }
         }
-
     }
 
     /*
