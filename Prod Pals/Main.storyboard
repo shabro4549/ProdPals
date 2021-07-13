@@ -266,11 +266,6 @@
                                 <color key="textColor" red="0.1333333333" green="0.1843137255" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EyQ-7C-5Ig">
-                                <rect key="frame" x="343" y="104" width="51" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.1333333333" green="0.1843137255" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZl-jh-2tb">
                                 <rect key="frame" x="184" y="714" width="47" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -297,13 +292,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Find Your Supporters" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="heD-wP-ACX">
-                                <rect key="frame" x="29" y="108" width="306" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wom-as-bFh">
                                 <rect key="frame" x="116" y="252" width="180" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -367,8 +355,6 @@
                         <outlet property="displayName" destination="Wom-as-bFh" id="EI6-nm-zkZ"/>
                         <outlet property="goalButton" destination="dZl-jh-2tb" id="rKz-4g-mpu"/>
                         <outlet property="imageView" destination="8gB-II-xIc" id="1fA-3d-svi"/>
-                        <outlet property="searchButton" destination="EyQ-7C-5Ig" id="NKV-cJ-CkK"/>
-                        <outlet property="searchField" destination="heD-wP-ACX" id="tMn-FQ-DXW"/>
                         <outlet property="supporterCount" destination="dco-G4-3vq" id="Jvn-HW-Ggz"/>
                         <outlet property="supportingCount" destination="9HI-gI-uNY" id="qin-bM-4RU"/>
                         <outlet property="tableView" destination="m1o-vl-1D2" id="VIm-zs-Kc6"/>
@@ -803,7 +789,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tqp-RL-uDe"/>
+        <segue reference="FlY-3g-skP"/>
         <segue reference="h8K-Bm-FvW"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -12,8 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchField: UITextField!
-    @IBOutlet weak var searchButton: UIImageView!
+//    @IBOutlet weak var searchField: UITextField!
+//    @IBOutlet weak var searchButton: UIImageView!
     let db = Firestore.firestore()
     var goalColours = [#colorLiteral(red: 1, green: 0.6235294118, blue: 0.9529411765, alpha: 1), #colorLiteral(red: 0.9960784314, green: 0.7921568627, blue: 0.3411764706, alpha: 1), #colorLiteral(red: 1, green: 0.4196078431, blue: 0.4196078431, alpha: 1), #colorLiteral(red: 0.2823529412, green: 0.8588235294, blue: 0.9843137255, alpha: 1), #colorLiteral(red: 0.1137254902, green: 0.8196078431, blue: 0.631372549, alpha: 1), #colorLiteral(red: 0, green: 0.8235294118, blue: 0.8274509804, alpha: 1), #colorLiteral(red: 0.3294117647, green: 0.6274509804, blue: 1, alpha: 1), #colorLiteral(red: 0.3725490196, green: 0.1529411765, blue: 0.8039215686, alpha: 1)]
     var bigGoals: [Goal] = []
@@ -48,9 +48,9 @@ class ViewController: UIViewController {
         goalButton.clipsToBounds = true
         
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(searchTapped(tapGestureRecognizer:)))
-            searchButton.isUserInteractionEnabled = true
-            searchButton.addGestureRecognizer(tapGestureRecognizer)
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(searchTapped(tapGestureRecognizer:)))
+//            searchButton.isUserInteractionEnabled = true
+//            searchButton.addGestureRecognizer(tapGestureRecognizer)
 
     }
     
@@ -114,38 +114,38 @@ class ViewController: UIViewController {
     }
 
     
-    @objc func searchTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-                
-        searchButton.alpha = 0
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(150), execute: {
-            self.searchButton.alpha = 1
-        })
-        
-        let userSearched = searchField.text!
-                
-        let docRef = db.collection("users").whereField("email", isEqualTo: userSearched)
-
-        docRef.getDocuments {
-            (querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-                        for document in querySnapshot!.documents {
-                            print("\(document.documentID) => \(document.data())")
-                        }
-                        if (querySnapshot!.documents.isEmpty) {
-                            print("no users found")
-                            self.searchField.text = ""
-                            let redPlaceholderText = NSAttributedString(string: "User Not Found.", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
-                            self.searchField.attributedPlaceholder = redPlaceholderText
-                        } else {
-                            print("user found")
-                            self.performSegue(withIdentifier: "goToUser", sender: self)
-                        }
-                }
-        }
-
-    }
+//    @objc func searchTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+//
+//        searchButton.alpha = 0
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(150), execute: {
+//            self.searchButton.alpha = 1
+//        })
+//
+//        let userSearched = searchField.text!
+//
+//        let docRef = db.collection("users").whereField("email", isEqualTo: userSearched)
+//
+//        docRef.getDocuments {
+//            (querySnapshot, err) in
+//                    if let err = err {
+//                        print("Error getting documents: \(err)")
+//                    } else {
+//                        for document in querySnapshot!.documents {
+//                            print("\(document.documentID) => \(document.data())")
+//                        }
+//                        if (querySnapshot!.documents.isEmpty) {
+//                            print("no users found")
+//                            self.searchField.text = ""
+//                            let redPlaceholderText = NSAttributedString(string: "User Not Found.", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+//                            self.searchField.attributedPlaceholder = redPlaceholderText
+//                        } else {
+//                            print("user found")
+//                            self.performSegue(withIdentifier: "goToUser", sender: self)
+//                        }
+//                }
+//        }
+//
+//    }
     
     @IBAction func goalButtonClicked(_ sender: UIButton) {
         
@@ -365,19 +365,9 @@ extension ViewController: GoalTableViewCellDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToGoalProgress" {
-            let destinationVC = segue.destination as! ProgressViewController
-            destinationVC.selectedGoal = selectedGoalTitle
-            print("ViewController ... \(selectedGoalTitle)")
-        }
-        
-        if segue.identifier == "goToUser" {
-            let destinationVC = segue.destination as! SearchedUserViewController
-            destinationVC.searchedUser = searchField.text!
-//            destinationVC.authedUser = user
-//            print(searchField.text!)
-        }
-        
+        let destinationVC = segue.destination as! ProgressViewController
+        destinationVC.selectedGoal = selectedGoalTitle
+        print("ViewController ... \(selectedGoalTitle)")
     }
     
 }

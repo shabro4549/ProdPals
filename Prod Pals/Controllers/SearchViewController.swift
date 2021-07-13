@@ -22,8 +22,6 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
 
         searchTableView.register(SearchTableViewCell.nib(), forCellReuseIdentifier: SearchTableViewCell.identifier)
         searchTableView.delegate = self
@@ -31,7 +29,6 @@ class SearchViewController: UIViewController {
         searchBar.delegate = self
         
         loadUsers()
-        // Do any additional setup after loading the view.
     }
     
     func loadUsers() {
@@ -53,17 +50,6 @@ class SearchViewController: UIViewController {
             }
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -86,7 +72,6 @@ extension SearchViewController : UITableViewDelegate, UITableViewDataSource {
 
 //MARK: - SearchTableViewCell Delegate
 
-
 extension SearchViewController : SearchTableViewCellDelegate {
     func didTapButton(with title: String) {
         selectedUser = title
@@ -97,20 +82,12 @@ extension SearchViewController : SearchTableViewCellDelegate {
         let destinationVC = segue.destination as! SearchedUserViewController
         destinationVC.searchedUser = selectedUser
     }
-//    func didTapButton(with title: String) {
-////        selectedChatTitle = title
-//        print("didTapButton title ...\(title)")
-////        performSegue(withIdentifier: "goToChat", sender: self)
-//    }
 }
 
 
 //MARK: - UISearchBar Delegate
 
 extension SearchViewController : UISearchBarDelegate {
-//    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-//        print(searchBar.text!)
-//    }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchBar.text!)
         filteredUsers = users.filter { $0.email.contains(searchBar.text!) }
