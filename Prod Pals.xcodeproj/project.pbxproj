@@ -28,6 +28,9 @@
 		FD7E8770269812CF006CD844 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD7E876E269812CF006CD844 /* FeedTableViewCell.xib */; };
 		FD7E877226981F36006CD844 /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7E877126981F36006CD844 /* Progress.swift */; };
 		FD81A8E625DF23990006652D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81A8E525DF23990006652D /* User.swift */; };
+		FD91B376269912890093933D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD91B375269912890093933D /* SearchViewController.swift */; };
+		FD91B37A269919170093933D /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD91B378269919170093933D /* SearchTableViewCell.swift */; };
+		FD91B37B269919170093933D /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD91B379269919170093933D /* SearchTableViewCell.xib */; };
 		FD9DF8D725493C6F00AB62F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */; };
 		FD9DF8D825493C6F00AB62F2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */; };
 		FD9DF8D925493C6F00AB62F2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D525493C6E00AB62F2 /* WelcomeViewController.swift */; };
@@ -63,6 +66,9 @@
 		FD7E876E269812CF006CD844 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		FD7E877126981F36006CD844 /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		FD81A8E525DF23990006652D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FD91B375269912890093933D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FD91B378269919170093933D /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		FD91B379269919170093933D /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FD9DF8D525493C6E00AB62F2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 				FD7E87622697C314006CD844 /* ChatViewController.swift */,
 				FD7E87682698097B006CD844 /* MessageViewController.swift */,
 				FD7E876B26980D59006CD844 /* FeedViewController.swift */,
+				FD91B375269912890093933D /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +175,8 @@
 				FD7E87652697D13A006CD844 /* ChatTableViewCell.xib */,
 				FD7E876D269812CF006CD844 /* FeedTableViewCell.swift */,
 				FD7E876E269812CF006CD844 /* FeedTableViewCell.xib */,
+				FD91B378269919170093933D /* SearchTableViewCell.swift */,
+				FD91B379269919170093933D /* SearchTableViewCell.xib */,
 			);
 			path = "Prod Pals";
 			sourceTree = "<group>";
@@ -248,6 +257,7 @@
 				FD7E87612697B8D1006CD844 /* Assets.xcassets in Resources */,
 				FD738F662653240000A3913C /* Main.storyboard in Resources */,
 				FD7E875C26978452006CD844 /* GoogleService-Info.plist in Resources */,
+				FD91B37B269919170093933D /* SearchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,10 +314,12 @@
 				FDDAEC8025C1033900CBAD6E /* Goal.swift in Sources */,
 				FD9DF8DA25493C6F00AB62F2 /* ViewController.swift in Sources */,
 				FD6873352589713100BF6C3B /* GoalTableViewCell.swift in Sources */,
+				FD91B376269912890093933D /* SearchViewController.swift in Sources */,
 				FD7E876F269812CF006CD844 /* FeedTableViewCell.swift in Sources */,
 				FD9DF8D725493C6F00AB62F2 /* LoginViewController.swift in Sources */,
 				FD7E87692698097B006CD844 /* MessageViewController.swift in Sources */,
 				FDCF01F6260AD93500C56FDA /* SearchedUserViewController.swift in Sources */,
+				FD91B37A269919170093933D /* SearchTableViewCell.swift in Sources */,
 				FD7E876C26980D59006CD844 /* FeedViewController.swift in Sources */,
 				FD9DF8D925493C6F00AB62F2 /* WelcomeViewController.swift in Sources */,
 				FD0E41712548E2BF00F5EB8A /* AppDelegate.swift in Sources */,
