@@ -17,6 +17,8 @@
 		FD57AA2126A1072A00250697 /* GoalSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD57AA2026A1072A00250697 /* GoalSearchViewController.swift */; };
 		FD57AA2426A10A2700250697 /* GoalSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD57AA2226A10A2700250697 /* GoalSearchTableViewCell.swift */; };
 		FD57AA2526A10A2700250697 /* GoalSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD57AA2326A10A2700250697 /* GoalSearchTableViewCell.xib */; };
+		FD57AA2826A11CC700250697 /* SelectedUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD57AA2626A11CC700250697 /* SelectedUserTableViewCell.swift */; };
+		FD57AA2926A11CC700250697 /* SelectedUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD57AA2726A11CC700250697 /* SelectedUserTableViewCell.xib */; };
 		FD6873352589713100BF6C3B /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6873332589713100BF6C3B /* GoalTableViewCell.swift */; };
 		FD6873362589713100BF6C3B /* GoalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD6873342589713100BF6C3B /* GoalTableViewCell.xib */; };
 		FD738F662653240000A3913C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD738F652653240000A3913C /* Main.storyboard */; };
@@ -58,6 +60,8 @@
 		FD57AA2026A1072A00250697 /* GoalSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSearchViewController.swift; sourceTree = "<group>"; };
 		FD57AA2226A10A2700250697 /* GoalSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSearchTableViewCell.swift; sourceTree = "<group>"; };
 		FD57AA2326A10A2700250697 /* GoalSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalSearchTableViewCell.xib; sourceTree = "<group>"; };
+		FD57AA2626A11CC700250697 /* SelectedUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedUserTableViewCell.swift; sourceTree = "<group>"; };
+		FD57AA2726A11CC700250697 /* SelectedUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedUserTableViewCell.xib; sourceTree = "<group>"; };
 		FD6873332589713100BF6C3B /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		FD6873342589713100BF6C3B /* GoalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalTableViewCell.xib; sourceTree = "<group>"; };
 		FD738329254D091B005AD046 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -189,6 +193,8 @@
 				FD91B379269919170093933D /* SearchTableViewCell.xib */,
 				FD57AA2226A10A2700250697 /* GoalSearchTableViewCell.swift */,
 				FD57AA2326A10A2700250697 /* GoalSearchTableViewCell.xib */,
+				FD57AA2626A11CC700250697 /* SelectedUserTableViewCell.swift */,
+				FD57AA2726A11CC700250697 /* SelectedUserTableViewCell.xib */,
 			);
 			path = "Prod Pals";
 			sourceTree = "<group>";
@@ -261,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD7E8770269812CF006CD844 /* FeedTableViewCell.xib in Resources */,
+				FD57AA2926A11CC700250697 /* SelectedUserTableViewCell.xib in Resources */,
 				FDF28C9D260D4579006F4281 /* Baloo-Regular.ttf in Resources */,
 				FD57AA2526A10A2700250697 /* GoalSearchTableViewCell.xib in Resources */,
 				FD7E87672697D13A006CD844 /* ChatTableViewCell.xib in Resources */,
@@ -344,6 +351,7 @@
 				FD7E87632697C314006CD844 /* ChatViewController.swift in Sources */,
 				FD0E41732548E2BF00F5EB8A /* SceneDelegate.swift in Sources */,
 				FD7E87662697D13A006CD844 /* ChatTableViewCell.swift in Sources */,
+				FD57AA2826A11CC700250697 /* SelectedUserTableViewCell.swift in Sources */,
 				FD9DF8D825493C6F00AB62F2 /* RegisterViewController.swift in Sources */,
 				FD81A8E625DF23990006652D /* User.swift in Sources */,
 			);

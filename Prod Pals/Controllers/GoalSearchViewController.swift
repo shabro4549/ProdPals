@@ -17,6 +17,7 @@ class GoalSearchViewController: UIViewController {
     
     var users: [User] = []
     var filteredUsers: [User] = []
+    var currentSelected: [String] = []
     var selectedUser: String = ""
     
 

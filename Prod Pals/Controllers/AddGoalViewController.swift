@@ -21,6 +21,10 @@ class AddGoalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        friendsTableView.register(SelectedUserTableViewCell.nib(), forCellReuseIdentifier: SelectedUserTableViewCell.identifier)
+        friendsTableView.delegate = self
+        friendsTableView.dataSource = self
+        
         if segmentedControl.selectedSegmentIndex == 0 {
             segmentLabel.text = "Public - goal + progress shared with supporters"
             addFriendsButton.alpha = 0
@@ -69,4 +73,20 @@ class AddGoalViewController: UIViewController {
         }
     }
 
+}
+
+//MARK: -  UITableView Delegate and DataSource
+
+extension AddGoalViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        selectedUsers.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell  = friendsTableView.dequeueReusableCell(withIdentifier: "SelectedUserTableViewCell", for: indexPath) as! SelectedUserTableViewCell
+        cell.configure(with: selectedUsers[indexPath.row])
+        return cell
+    }
+    
+    
 }

@@ -59,8 +59,4 @@ class GoalSearchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-//    @IBAction func addPressed(_ sender: Any) {
-//        print("Selected user ... \(usernameLabel.text)")
-//    }
-    
 }
