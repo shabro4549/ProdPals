@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Firebase
 
 class AddGoalViewController: UIViewController {
+    
+    let db = Firestore.firestore()
 
     @IBOutlet weak var goalLabel: UITextField!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -16,6 +19,7 @@ class AddGoalViewController: UIViewController {
     @IBOutlet weak var segmentLabel: UILabel!
     
     var selectedUsers: [String] = []
+    var goalPassedBack: String  = ""
     var isShared: Bool = false
     
     override func viewDidLoad() {
@@ -50,14 +54,44 @@ class AddGoalViewController: UIViewController {
         print("Selected Users in Goal ... \(selectedUsers)")
         print(segmentedControl.selectedSegmentIndex)
         print(isShared)
+        goalLabel.text = goalPassedBack
     }
     
     @IBAction func addFriendsPressed(_ sender: Any) {
         
     }
+    
     @IBAction func addGoalPressed(_ sender: Any) {
-        print(goalLabel.text!)
-        print(segmentedControl.selectedSegmentIndex)
+        print("Goal to save ... \(goalLabel.text!)")
+        print("Segment number ... \(segmentedControl.selectedSegmentIndex)")
+        print("Users to save ... \(selectedUsers)")
+        
+        var selectedSegment = ""
+        if segmentedControl.selectedSegmentIndex == 0 {
+           selectedSegment = "public"
+        } else if  segmentedControl.selectedSegmentIndex == 1 {
+            selectedSegment = "shared"
+        } else {
+            selectedSegment = "private"
+        }
+        
+        if let addedGoal = goalLabel.text, let user = Auth.auth().currentUser?.email {
+            self.db.collection("bigGoals").addDocument(data: [
+                "bigGoal" : addedGoal,
+                "user" : user,
+                "type" : selectedSegment,
+                "users" : selectedUsers
+            ]) { (error) in
+                if let e = error {
+                    print("There was an issue saving data to firestore, \(e)")
+                } else {
+                    print("Successfully saved data.")
+                }
+            }
+        }
+        
+        navigationController?.popViewController(animated: true)
+        
     }
     
     @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
@@ -80,6 +114,8 @@ class AddGoalViewController: UIViewController {
         if segue.identifier == "goToSearch" {
             let destinationVC = segue.destination as! GoalSearchViewController
             destinationVC.currentSelected = selectedUsers
+            destinationVC.goalEntered = goalLabel.text!
+    
             print("In prepare ... \(selectedUsers)")
         }
         }

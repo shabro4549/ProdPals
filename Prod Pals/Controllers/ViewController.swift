@@ -289,8 +289,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController: GoalTableViewCellDelegate {
     func didTapButton(with title: String) {
         selectedGoalTitle = title
-//        print("didTapButton title ...\(title)")
-//        print("didTapButton selected ...\(selectedGoalTitle)")
         performSegue(withIdentifier: "goToGoalProgress", sender: self)
     }
     
@@ -471,19 +469,19 @@ class GoalAlert: UIViewController {
         print(customSC.selectedSegmentIndex)
         print()
         
-                if let addedGoal = sampleTextField.text, let user = Auth.auth().currentUser?.email {
-                    self.db.collection("bigGoals").addDocument(data: [
-                            "bigGoal" : addedGoal,
-                            "user" : user,
-                            "type" : selectedSegment
-                    ]) { (error) in
-                            if let e = error {
-                                print("There was an issue saving data to firestore, \(e)")
-                            } else {
-                                print("Successfully saved data.")
-                            }
-                        }
-                    }
+        if let addedGoal = sampleTextField.text, let user = Auth.auth().currentUser?.email {
+            self.db.collection("bigGoals").addDocument(data: [
+                "bigGoal" : addedGoal,
+                "user" : user,
+                "type" : selectedSegment
+            ]) { (error) in
+                if let e = error {
+                    print("There was an issue saving data to firestore, \(e)")
+                } else {
+                    print("Successfully saved data.")
+                }
+            }
+        }
         
         guard let targetView = myTargetView else {
             return

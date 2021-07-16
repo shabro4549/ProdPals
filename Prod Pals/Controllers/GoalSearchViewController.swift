@@ -19,6 +19,7 @@ class GoalSearchViewController: UIViewController {
     var filteredUsers: [User] = []
     var currentSelected: [String] = []
     var selectedUser: String = ""
+    var goalEntered: String = ""
     
 
     override func viewDidLoad() {
@@ -88,6 +89,7 @@ extension GoalSearchViewController : GoalSearchTableViewCellDelegate {
         currentSelected.append(selectedUser)
         destinationVC.selectedUsers = currentSelected
         destinationVC.isShared = true
+        destinationVC.goalPassedBack = goalEntered
     }
 }
 
