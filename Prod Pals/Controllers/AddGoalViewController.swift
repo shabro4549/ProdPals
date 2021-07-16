@@ -52,6 +52,9 @@ class AddGoalViewController: UIViewController {
         print(isShared)
     }
     
+    @IBAction func addFriendsPressed(_ sender: Any) {
+        
+    }
     @IBAction func addGoalPressed(_ sender: Any) {
         print(goalLabel.text!)
         print(segmentedControl.selectedSegmentIndex)
@@ -72,6 +75,14 @@ class AddGoalViewController: UIViewController {
             friendsTableView.alpha = 0
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSearch" {
+            let destinationVC = segue.destination as! GoalSearchViewController
+            destinationVC.currentSelected = selectedUsers
+            print("In prepare ... \(selectedUsers)")
+        }
+        }
 
 }
 

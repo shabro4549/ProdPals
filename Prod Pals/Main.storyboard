@@ -773,7 +773,7 @@
             <objects>
                 <viewController id="IVR-DA-LBP" customClass="AddGoalViewController" customModule="Something" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="48Q-yu-gwr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bW4-9q-OcJ">
@@ -813,7 +813,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Add Friends"/>
                                 <connections>
-                                    <segue destination="jZI-k0-dEw" kind="show" id="6eJ-WT-j68"/>
+                                    <action selector="addFriendsPressed:" destination="IVR-DA-LBP" eventType="touchUpInside" id="9P0-vF-aEq"/>
+                                    <segue destination="jZI-k0-dEw" kind="show" identifier="goToSearch" id="6eJ-WT-j68"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRe-Cr-dHZ">

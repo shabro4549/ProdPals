@@ -24,6 +24,8 @@ class GoalSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Current selected = \(currentSelected)")
+        
         searchTableView.register(GoalSearchTableViewCell.nib(), forCellReuseIdentifier: GoalSearchTableViewCell.identifier)
         searchTableView.delegate = self
         searchTableView.dataSource = self
@@ -83,7 +85,8 @@ extension GoalSearchViewController : GoalSearchTableViewCellDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! AddGoalViewController
-        destinationVC.selectedUsers.append(selectedUser)
+        currentSelected.append(selectedUser)
+        destinationVC.selectedUsers = currentSelected
         destinationVC.isShared = true
     }
 }
