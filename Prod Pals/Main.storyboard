@@ -802,6 +802,9 @@
                                 <color key="backgroundColor" red="0.1333333333" green="0.1843137255" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Add Friends"/>
+                                <connections>
+                                    <segue destination="jZI-k0-dEw" kind="show" id="6eJ-WT-j68"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRe-Cr-dHZ">
                                 <rect key="frame" x="111" y="682" width="192" height="74"/>
@@ -860,15 +863,15 @@
             </objects>
             <point key="canvasLocation" x="3321.739130434783" y="885.9375"/>
         </scene>
-        <!--View Controller-->
+        <!--Goal Search View Controller-->
         <scene sceneID="QYo-OJ-nH1">
             <objects>
-                <viewController id="jZI-k0-dEw" sceneMemberID="viewController">
+                <viewController id="jZI-k0-dEw" customClass="GoalSearchViewController" customModule="Something" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ju3-B4-6Tk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qk-ts-EU7">
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Find friends to add to your goal" translatesAutoresizingMaskIntoConstraints="NO" id="2qk-ts-EU7">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -877,11 +880,27 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GoalSearchTableViewCell" id="tqy-zJ-ey5">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tqy-zJ-ey5" id="N1p-nJ-Ica">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Woj-cp-x6C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RvV-PN-PfS"/>
+                    <connections>
+                        <outlet property="searchBar" destination="2qk-ts-EU7" id="Jji-Pm-xnZ"/>
+                        <outlet property="searchTableView" destination="dn5-qJ-EFS" id="IhS-Yd-CEb"/>
+                        <segue destination="IVR-DA-LBP" kind="show" identifier="backToGoal" id="7dM-xM-c0w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Laf-zs-UCo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -908,6 +927,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="7dM-xM-c0w"/>
         <segue reference="jhY-NN-eSg"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -1,27 +1,27 @@
 //
-//  SearchTableViewCell.swift
+//  GoalSearchTableViewCell.swift
 //  Something
 //
-//  Created by Shannon Brown on 2021-07-09.
+//  Created by Shannon Brown on 2021-07-15.
 //
 
 import UIKit
 
-protocol SearchTableViewCellDelegate : AnyObject {
+protocol GoalSearchTableViewCellDelegate : AnyObject {
     func didTapButton(with title: String)
 }
 
-class SearchTableViewCell: UITableViewCell {
-    weak var delegate: SearchTableViewCellDelegate?
+class GoalSearchTableViewCell: UITableViewCell {
+    weak var delegate: GoalSearchTableViewCellDelegate?
     
-    static let identifier = "SearchTableViewCell"
+    static let identifier = "GoalSearchTableViewCell"
     
     static func nib() -> UINib {
-        return UINib(nibName: "SearchTableViewCell", bundle: nil)
+        return UINib(nibName: "GoalSearchTableViewCell", bundle: nil)
     }
-    
-    @IBOutlet weak var usernameButton: UIButton!
+
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
     
     private var title: String = ""
     
@@ -33,7 +33,7 @@ class SearchTableViewCell: UITableViewCell {
         self.title = title
         let url = URL(string: image)!
         
-        usernameButton.setTitle(title, for: .normal)
+        usernameLabel.text = title
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
 
@@ -58,5 +58,9 @@ class SearchTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+//    @IBAction func addPressed(_ sender: Any) {
+//        print("Selected user ... \(usernameLabel.text)")
+//    }
     
 }
