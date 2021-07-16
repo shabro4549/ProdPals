@@ -12,8 +12,6 @@ class ViewController: UIViewController {
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
-//    @IBOutlet weak var searchField: UITextField!
-//    @IBOutlet weak var searchButton: UIImageView!
     let db = Firestore.firestore()
     var goalColours = [#colorLiteral(red: 1, green: 0.6235294118, blue: 0.9529411765, alpha: 1), #colorLiteral(red: 0.9960784314, green: 0.7921568627, blue: 0.3411764706, alpha: 1), #colorLiteral(red: 1, green: 0.4196078431, blue: 0.4196078431, alpha: 1), #colorLiteral(red: 0.2823529412, green: 0.8588235294, blue: 0.9843137255, alpha: 1), #colorLiteral(red: 0.1137254902, green: 0.8196078431, blue: 0.631372549, alpha: 1), #colorLiteral(red: 0, green: 0.8235294118, blue: 0.8274509804, alpha: 1), #colorLiteral(red: 0.3294117647, green: 0.6274509804, blue: 1, alpha: 1), #colorLiteral(red: 0.3725490196, green: 0.1529411765, blue: 0.8039215686, alpha: 1)]
     var bigGoals: [Goal] = []
@@ -46,12 +44,7 @@ class ViewController: UIViewController {
         displayName.text = user?.email!
         goalButton.layer.cornerRadius = 10
         goalButton.clipsToBounds = true
-        
-        
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(searchTapped(tapGestureRecognizer:)))
-//            searchButton.isUserInteractionEnabled = true
-//            searchButton.addGestureRecognizer(tapGestureRecognizer)
-
+    
     }
     
     func countSupporting() {
@@ -114,76 +107,14 @@ class ViewController: UIViewController {
     }
 
     
-//    @objc func searchTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-//
-//        searchButton.alpha = 0
-//        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(150), execute: {
-//            self.searchButton.alpha = 1
-//        })
-//
-//        let userSearched = searchField.text!
-//
-//        let docRef = db.collection("users").whereField("email", isEqualTo: userSearched)
-//
-//        docRef.getDocuments {
-//            (querySnapshot, err) in
-//                    if let err = err {
-//                        print("Error getting documents: \(err)")
-//                    } else {
-//                        for document in querySnapshot!.documents {
-//                            print("\(document.documentID) => \(document.data())")
-//                        }
-//                        if (querySnapshot!.documents.isEmpty) {
-//                            print("no users found")
-//                            self.searchField.text = ""
-//                            let redPlaceholderText = NSAttributedString(string: "User Not Found.", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
-//                            self.searchField.attributedPlaceholder = redPlaceholderText
-//                        } else {
-//                            print("user found")
-//                            self.performSegue(withIdentifier: "goToUser", sender: self)
-//                        }
-//                }
-//        }
-//
-//    }
-    
     @IBAction func goalButtonClicked(_ sender: UIButton) {
         
-        customAlert.showAlert(with: "Add a New Goal", message: "Keep your goal public, within a group, or private", on: self)
-
-        func dismissAlert() {
-            customAlert.dismissAlert()
-        }
-        
-//        var textField = UITextField()
-//        let alert = UIAlertController(title: "Add a Big Goal", message: "A goal with sub goals", preferredStyle: .alert)
-//        let action = UIAlertAction(title: "Add Goal", style: .default) { (action) in
+//        customAlert.showAlert(with: "Add a New Goal", message: "Keep your goal public, within a group, or private", on: self)
 //
-//        if let addedGoal = textField.text, let user = Auth.auth().currentUser?.email {
-//            self.db.collection("bigGoals").addDocument(data: [
-//                    "bigGoal" : addedGoal,
-//                    "user" : user
-//            ]) { (error) in
-//                    if let e = error {
-//                        print("There was an issue saving data to firestore, \(e)")
-//                    } else {
-//                        print("Successfully saved data.")
-//                    }
-//                }
-//            }
-//
-//            self.tableView.reloadData()
-//            self.usersGoal = []
+//        func dismissAlert() {
+//            customAlert.dismissAlert()
 //        }
-//
-//        alert.addTextField { (alertTextField) in
-//            alertTextField.placeholder = "Type your big goal here..."
-//            textField = alertTextField
-//        }
-//
-//        alert.addAction(action)
-//
-//        present(alert, animated: true, completion: nil)
+//    
         
     }
     
@@ -200,7 +131,6 @@ class ViewController: UIViewController {
                 if let snapshotDocuments = querySnapshot?.documents {
                     
                     for doc in snapshotDocuments {
-//                        print("This is the doc in snapshotListener for bigGoals ... \(doc.data())")
                         let data = doc.data()
                         
                         if let userData = data["user"] as? String, let goalData = data["bigGoal"] as? String, let goalType = data["type"] as? String {
@@ -333,10 +263,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.configure(with: usersGoal[indexPath.row].goal, with: usersGoal[indexPath.row].type)
-        print("Row at Index Path ... \(indexPath.row)")
-        print(usersGoal)
-        print(bigGoals)
-        print(bigGoals[indexPath.row].goal)
+//        print("Row at Index Path ... \(indexPath.row)")
+//        print(usersGoal)
+//        print(bigGoals)
+//        print(bigGoals[indexPath.row].goal)
         usersGoal = []
         cell.bigGoalButton.backgroundColor = goalColours.randomElement()
         cell.bigGoalButton.layer.cornerRadius = 20
@@ -359,20 +289,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController: GoalTableViewCellDelegate {
     func didTapButton(with title: String) {
         selectedGoalTitle = title
-        print("didTapButton title ...\(title)")
-        print("didTapButton selected ...\(selectedGoalTitle)")
+//        print("didTapButton title ...\(title)")
+//        print("didTapButton selected ...\(selectedGoalTitle)")
         performSegue(withIdentifier: "goToGoalProgress", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! ProgressViewController
-        destinationVC.selectedGoal = selectedGoalTitle
-        print("ViewController ... \(selectedGoalTitle)")
+        if segue.identifier == "goToGoalProgress" {
+            let destinationVC = segue.destination as! ProgressViewController
+            destinationVC.selectedGoal = selectedGoalTitle
+            print("ViewController ... \(selectedGoalTitle)")
+        }
+        
     }
     
 }
-
-
 
 
 //MARK: - UIImagePickerController Delegate

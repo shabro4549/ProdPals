@@ -31,6 +31,7 @@
 		FD91B376269912890093933D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD91B375269912890093933D /* SearchViewController.swift */; };
 		FD91B37A269919170093933D /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD91B378269919170093933D /* SearchTableViewCell.swift */; };
 		FD91B37B269919170093933D /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD91B379269919170093933D /* SearchTableViewCell.xib */; };
+		FD91B37D269E7DAE0093933D /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD91B37C269E7DAE0093933D /* AddGoalViewController.swift */; };
 		FD9DF8D725493C6F00AB62F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */; };
 		FD9DF8D825493C6F00AB62F2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */; };
 		FD9DF8D925493C6F00AB62F2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DF8D525493C6E00AB62F2 /* WelcomeViewController.swift */; };
@@ -69,6 +70,7 @@
 		FD91B375269912890093933D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		FD91B378269919170093933D /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		FD91B379269919170093933D /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		FD91B37C269E7DAE0093933D /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
 		FD9DF8D325493C6D00AB62F2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FD9DF8D425493C6E00AB62F2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FD9DF8D525493C6E00AB62F2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				FD7E87682698097B006CD844 /* MessageViewController.swift */,
 				FD7E876B26980D59006CD844 /* FeedViewController.swift */,
 				FD91B375269912890093933D /* SearchViewController.swift */,
+				FD91B37C269E7DAE0093933D /* AddGoalViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD91B37D269E7DAE0093933D /* AddGoalViewController.swift in Sources */,
 				FD7E877226981F36006CD844 /* Progress.swift in Sources */,
 				FDDAEC8025C1033900CBAD6E /* Goal.swift in Sources */,
 				FD9DF8DA25493C6F00AB62F2 /* ViewController.swift in Sources */,
