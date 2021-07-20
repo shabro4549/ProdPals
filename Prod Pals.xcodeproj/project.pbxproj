@@ -19,6 +19,9 @@
 		FD57AA2526A10A2700250697 /* GoalSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD57AA2326A10A2700250697 /* GoalSearchTableViewCell.xib */; };
 		FD57AA2826A11CC700250697 /* SelectedUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD57AA2626A11CC700250697 /* SelectedUserTableViewCell.swift */; };
 		FD57AA2926A11CC700250697 /* SelectedUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD57AA2726A11CC700250697 /* SelectedUserTableViewCell.xib */; };
+		FD57AA2C26A21DB100250697 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD57AA2A26A21DB100250697 /* MessageTableViewCell.swift */; };
+		FD57AA2D26A21DB100250697 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD57AA2B26A21DB100250697 /* MessageTableViewCell.xib */; };
+		FD57AA2F26A25F8100250697 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD57AA2E26A25F8100250697 /* Message.swift */; };
 		FD6873352589713100BF6C3B /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6873332589713100BF6C3B /* GoalTableViewCell.swift */; };
 		FD6873362589713100BF6C3B /* GoalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD6873342589713100BF6C3B /* GoalTableViewCell.xib */; };
 		FD738F662653240000A3913C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD738F652653240000A3913C /* Main.storyboard */; };
@@ -62,6 +65,9 @@
 		FD57AA2326A10A2700250697 /* GoalSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalSearchTableViewCell.xib; sourceTree = "<group>"; };
 		FD57AA2626A11CC700250697 /* SelectedUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedUserTableViewCell.swift; sourceTree = "<group>"; };
 		FD57AA2726A11CC700250697 /* SelectedUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedUserTableViewCell.xib; sourceTree = "<group>"; };
+		FD57AA2A26A21DB100250697 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		FD57AA2B26A21DB100250697 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		FD57AA2E26A25F8100250697 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		FD6873332589713100BF6C3B /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		FD6873342589713100BF6C3B /* GoalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalTableViewCell.xib; sourceTree = "<group>"; };
 		FD738329254D091B005AD046 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 				FDDAEC7F25C1033900CBAD6E /* Goal.swift */,
 				FD81A8E525DF23990006652D /* User.swift */,
 				FD7E877126981F36006CD844 /* Progress.swift */,
+				FD57AA2E26A25F8100250697 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +202,8 @@
 				FD57AA2326A10A2700250697 /* GoalSearchTableViewCell.xib */,
 				FD57AA2626A11CC700250697 /* SelectedUserTableViewCell.swift */,
 				FD57AA2726A11CC700250697 /* SelectedUserTableViewCell.xib */,
+				FD57AA2A26A21DB100250697 /* MessageTableViewCell.swift */,
+				FD57AA2B26A21DB100250697 /* MessageTableViewCell.xib */,
 			);
 			path = "Prod Pals";
 			sourceTree = "<group>";
@@ -268,6 +277,7 @@
 			files = (
 				FD7E8770269812CF006CD844 /* FeedTableViewCell.xib in Resources */,
 				FD57AA2926A11CC700250697 /* SelectedUserTableViewCell.xib in Resources */,
+				FD57AA2D26A21DB100250697 /* MessageTableViewCell.xib in Resources */,
 				FDF28C9D260D4579006F4281 /* Baloo-Regular.ttf in Resources */,
 				FD57AA2526A10A2700250697 /* GoalSearchTableViewCell.xib in Resources */,
 				FD7E87672697D13A006CD844 /* ChatTableViewCell.xib in Resources */,
@@ -339,6 +349,7 @@
 				FD7E876F269812CF006CD844 /* FeedTableViewCell.swift in Sources */,
 				FD57AA2126A1072A00250697 /* GoalSearchViewController.swift in Sources */,
 				FD9DF8D725493C6F00AB62F2 /* LoginViewController.swift in Sources */,
+				FD57AA2F26A25F8100250697 /* Message.swift in Sources */,
 				FD57AA2426A10A2700250697 /* GoalSearchTableViewCell.swift in Sources */,
 				FD7E87692698097B006CD844 /* MessageViewController.swift in Sources */,
 				FDCF01F6260AD93500C56FDA /* SearchedUserViewController.swift in Sources */,
@@ -348,6 +359,7 @@
 				FD0E41712548E2BF00F5EB8A /* AppDelegate.swift in Sources */,
 				FD123AFA25D4940200D5B722 /* ProgressCollectionViewCell.swift in Sources */,
 				FD3AF4B025C22EFD002566C6 /* ProgressViewController.swift in Sources */,
+				FD57AA2C26A21DB100250697 /* MessageTableViewCell.swift in Sources */,
 				FD7E87632697C314006CD844 /* ChatViewController.swift in Sources */,
 				FD0E41732548E2BF00F5EB8A /* SceneDelegate.swift in Sources */,
 				FD7E87662697D13A006CD844 /* ChatTableViewCell.swift in Sources */,

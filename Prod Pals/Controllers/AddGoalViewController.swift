@@ -62,9 +62,9 @@ class AddGoalViewController: UIViewController {
     }
     
     @IBAction func addGoalPressed(_ sender: Any) {
-        print("Goal to save ... \(goalLabel.text!)")
-        print("Segment number ... \(segmentedControl.selectedSegmentIndex)")
-        print("Users to save ... \(selectedUsers)")
+//        print("Goal to save ... \(goalLabel.text!)")
+//        print("Segment number ... \(segmentedControl.selectedSegmentIndex)")
+//        print("Users to save ... \(selectedUsers)")
         
         var selectedSegment = ""
         if segmentedControl.selectedSegmentIndex == 0 {
@@ -76,6 +76,9 @@ class AddGoalViewController: UIViewController {
         }
         
         if let addedGoal = goalLabel.text, let user = Auth.auth().currentUser?.email {
+            selectedUsers.append(user)
+            print("Users to save ... \(selectedUsers)")
+            
             self.db.collection("bigGoals").addDocument(data: [
                 "bigGoal" : addedGoal,
                 "user" : user,
@@ -88,6 +91,19 @@ class AddGoalViewController: UIViewController {
                     print("Successfully saved data.")
                 }
             }
+            
+            self.db.collection("chats").document("\(selectedUsers)+\(addedGoal)").setData([
+                "date" : "random date",
+                "sender" : user,
+                "content" : selectedSegment,
+            ]) { (error) in
+                if let e = error {
+                    print("There was an issue saving data to firestore, \(e)")
+                } else {
+                    print("Successfully saved data.")
+                }
+            }
+
         }
         
         navigationController?.popViewController(animated: true)

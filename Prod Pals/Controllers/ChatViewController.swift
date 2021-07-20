@@ -31,7 +31,7 @@ class ChatViewController: UIViewController {
     
     func loadChats() {
         if let userEmail = user?.email {
-            db.collection("bigGoals").whereField("type", isEqualTo: "shared").whereField("user", isEqualTo: userEmail).addSnapshotListener { (querySnapshot, error) in
+            db.collection("bigGoals").whereField("type", isEqualTo: "shared").whereField("users", arrayContains: userEmail).addSnapshotListener { (querySnapshot, error) in
 
                 self.sharedGoals = []
 

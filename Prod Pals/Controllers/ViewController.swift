@@ -119,8 +119,10 @@ class ViewController: UIViewController {
     }
     
     func loadGoals() {
-
-        db.collection("bigGoals").addSnapshotListener { (querySnapshot, error) in
+        
+        if let userEmail = user?.email {
+            print("User email in load goals ... \(userEmail)")
+        db.collection("bigGoals").whereField("users", arrayContains: userEmail).addSnapshotListener { (querySnapshot, error) in
 
             self.bigGoals = []
 
@@ -132,6 +134,7 @@ class ViewController: UIViewController {
                     
                     for doc in snapshotDocuments {
                         let data = doc.data()
+                        let id = doc.documentID
                         
                         if let userData = data["user"] as? String, let goalData = data["bigGoal"] as? String, let goalType = data["type"] as? String {
                             let newGoal = Goal(user: userData, goal: goalData, type: goalType)
@@ -151,6 +154,7 @@ class ViewController: UIViewController {
                 
             }
         }
+    }
 
     }
     
@@ -244,9 +248,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var counter = 0
         for goal in bigGoals {
-            if goal.user == Auth.auth().currentUser?.email {
+//            if goal.user == Auth.auth().currentUser?.email {
                 counter = counter + 1
-            }
+//            }
         }
         return counter
     }
@@ -257,9 +261,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.delegate = self
         
         for goal in bigGoals {
-            if goal.user == Auth.auth().currentUser?.email {
+//            if goal.user == Auth.auth().currentUser?.email {
                 usersGoal.append(goal)
-            }
+//            }
         }
         
         cell.configure(with: usersGoal[indexPath.row].goal, with: usersGoal[indexPath.row].type)
