@@ -78,6 +78,8 @@ class AddGoalViewController: UIViewController {
         if let addedGoal = goalLabel.text, let user = Auth.auth().currentUser?.email {
             selectedUsers.append(user)
             print("Users to save ... \(selectedUsers)")
+            let date = Date()
+            let sortingDate = date.timeIntervalSince1970
             
             self.db.collection("bigGoals").addDocument(data: [
                 "bigGoal" : addedGoal,
@@ -86,19 +88,19 @@ class AddGoalViewController: UIViewController {
                 "users" : selectedUsers
             ]) { (error) in
                 if let e = error {
-                    print("There was an issue saving data to firestore, \(e)")
+                    print("There was an issue saving new goal data to firestore, \(e)")
                 } else {
                     print("Successfully saved data.")
                 }
             }
             
-            self.db.collection("chats").document("\(selectedUsers)+\(addedGoal)").setData([
-                "date" : "random date",
+            self.db.collection("chats").document("\(selectedUsers)+\(addedGoal)").collection("messages").addDocument(data: [
+                "date" : sortingDate,
                 "sender" : user,
-                "content" : selectedSegment,
+                "content" : "Hi, I have added you to my goal, \(addedGoal)"
             ]) { (error) in
                 if let e = error {
-                    print("There was an issue saving data to firestore, \(e)")
+                    print("There was an issue saving new chat data to firestore, \(e)")
                 } else {
                     print("Successfully saved data.")
                 }

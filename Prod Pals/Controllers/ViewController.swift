@@ -136,8 +136,8 @@ class ViewController: UIViewController {
                         let data = doc.data()
                         let id = doc.documentID
                         
-                        if let userData = data["user"] as? String, let goalData = data["bigGoal"] as? String, let goalType = data["type"] as? String {
-                            let newGoal = Goal(user: userData, goal: goalData, type: goalType)
+                        if let userData = data["user"] as? String, let goalData = data["bigGoal"] as? String, let goalType = data["type"] as? String, let goalUsers = data["users"] as? [String] {
+                            let newGoal = Goal(user: userData, goal: goalData, type: goalType, users: goalUsers)
                             
                             self.bigGoals.append(newGoal)
 

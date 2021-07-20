@@ -45,9 +45,10 @@ class ChatViewController: UIViewController {
     //                        print("This is the doc in snapshotListener for bigGoals ... \(doc.data())")
                             let data = doc.data()
                             
-                            if let userData = data["user"] as? String, let goalData = data["bigGoal"] as? String, let goalType = data["type"] as? String {
-                                let newGoal = Goal(user: userData, goal: goalData, type: goalType)
+                            if let userData = data["user"] as? String, let goalData = data["bigGoal"] as? String, let goalType = data["type"] as? String, let currentUsers = data["users"] as? [String] {
                                 
+                                let newGoal = Goal(user: userData, goal: goalData, type: goalType, users: currentUsers)
+                                print("In load chats, newGoal = \(newGoal)")
                                 self.sharedGoals.append(newGoal)
 
 
@@ -112,12 +113,22 @@ extension ChatViewController : UITableViewDelegate, UITableViewDataSource {
 extension ChatViewController : ChatTableViewCellDelegate {
     func didTapButton(with title: String) {
         selectedChatTitle = title
-        print(selectedChatTitle)
+        print("Selected title = \(selectedChatTitle)")
         performSegue(withIdentifier: "goToChat", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! MessageViewController
         destinationVC.selectedChat = selectedChatTitle
+        print("In prepare, shared goals = \(sharedGoals)")
+        for goal in sharedGoals {
+            print("In for loop in prepare")
+            print("for loop, goal = \(goal.goal)")
+            print("for loop, goalUsers = \(goal.users)")
+            if goal.goal == selectedChatTitle {
+                destinationVC.goalUsers = goal.users
+            }
+        }
     }
 }
+

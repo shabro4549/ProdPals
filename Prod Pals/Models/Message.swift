@@ -8,8 +8,7 @@
 import Foundation
 
 struct Message {
-    let date: String
+    let date: TimeInterval
     let message: String
     let sender: String
-    let goal: String
 }

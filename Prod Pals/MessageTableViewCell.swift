@@ -20,7 +20,7 @@ class MessageTableViewCell: UITableViewCell {
     @IBOutlet weak var userProfile: UIImageView!
     @IBOutlet weak var userMessage: UILabel!
     
-    func configure(with message: String, with image: String, with sender: String, with authedUser: String) {
+    func configure(with message: String, with sender: String, with authedUser: String) {
         if authedUser == sender {
             senderProfile.alpha = 0
             senderMessage.alpha = 0

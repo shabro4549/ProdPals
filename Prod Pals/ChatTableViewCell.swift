@@ -29,6 +29,7 @@ class ChatTableViewCell: UITableViewCell{
     }
     
     func configure(with title: String) {
+        self.title = title
         print(title)
         chatButton.setTitle(title, for: .normal)
     }

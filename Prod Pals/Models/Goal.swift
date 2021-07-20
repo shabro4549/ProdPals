@@ -12,5 +12,6 @@ struct Goal {
     let user: String
     let goal: String
     let type: String
+    let users: [String]
 //    let images: [UIImage]
 }
